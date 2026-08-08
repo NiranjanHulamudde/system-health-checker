@@ -1,0 +1,16 @@
+esults are stored under diskusagereport.txt
+echo "Date : $(date '+%Y-%m-%d %H:%M:%S')"
+echo "=====Disk Space Checker====="
+echo "Checking the remaining disk space..."
+sleep 2
+
+disk_usage=$(df -h | grep -vE 'tmpfs' | awk '{print $5}' | cut -d '%' -f1 | sort -nr | head -1)
+
+if [ "$disk_usage" -gt 80 ]
+then
+echo "Disk space is used more than 80%"
+echo "Disk usage : Unhealthy"
+else
+echo "Disk usage is under 80%."
+echo "Disk usage : Healthy"
+fi
