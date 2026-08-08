@@ -13,7 +13,7 @@ A lightweight, automated system monitoring suite written in Bash. This utility l
 ## 🚀 Quick Setup
 1. Clone the repository:
    ```bash
-   git clone https://github.com
+   git clone https://github.com/NiranjanHulamudde/system-health-checker.git
    ```
 2. Grant executable permissions to the tracking script:
    ```bash
