@@ -1,0 +1,15 @@
+#This is the script to check the memory usage by the system.
+#Logs are stored under memory logs at this location /home/yourhostname/file
+
+echo "====System Memory Checker===="
+echo
+echo "Logged time - $(date)"
+echo
+memory_usage=$(ps aux --sort=-%mem | awk 'NR==2 {print $3}')
+if awk -v mem="$memory_usage" 'BEGIN {exit !(mem >= 80.0)}'
+then
+echo "High Memory usage ($memory_usage%), need action."
+else
+echo "Normal Memory usage ($memory_usage%), no action required."
+fi
+
