@@ -23,3 +23,5 @@ A lightweight, automated system monitoring suite written in Bash. This utility l
    ```text
    * * * * * /path/to/disk-usagecheck >> /path/to/diskreport.txt 2>&1
    ```
+
+   **testing jenkins CI/CD**
