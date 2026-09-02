@@ -18,5 +18,5 @@ pipeline {
                 sh 'docker build -t memory-checker:latest .'
             }
         }
-            }
-        }
+    } 
+} 
