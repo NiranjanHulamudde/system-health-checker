@@ -16,7 +16,6 @@ RUN chmod +x memory-health-checker
 CMD ["./memory-health-checker"]
 
 
-=======
 # Use a lightweight Linux base image
 FROM alpine:latest
 
@@ -35,4 +34,3 @@ RUN chmod +x /app/check_mem.sh /app/memory-health-checker
 
 # Set the script to run when the container starts
 CMD ["/bin/bash", "/app/memory-health-checker"]
->>>>>>> 5bd13af03e7c5cdb0bf60d45ba3ec5fa8862183d
