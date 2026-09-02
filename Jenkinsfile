@@ -38,4 +38,12 @@ pipeline {
               }
             }
         }
+    post {
+        success {
+            echo 'Image deployed succesfully.'
+        }
+        failure {
+            echo 'Image failed to deploy, please check the stages.'
+        }
+    }
 }
