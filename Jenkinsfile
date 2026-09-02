@@ -15,7 +15,7 @@ pipeline {
         stage('Building the Image') {
             steps {
                 echo 'Building the docker image of memory checker'
-                sh 'docker build -t memory-checker:latest'
+                sh 'docker build -t memory-checker:latest .'
             }
         }
             }
