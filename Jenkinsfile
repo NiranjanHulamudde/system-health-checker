@@ -29,7 +29,7 @@ pipeline {
         stage('Pushing the image to dockerhub') {
               steps {
                   echo 'Pushing the image to dockerhub'
-                  withCredentials([usernamePassword(credentialsID : 'ba2f5e5b-9bc3-4671-aabe-f7d583d9d6d9',
+                  withCredentials([usernamePassword(credentialsId : 'ba2f5e5b-9bc3-4671-aabe-f7d583d9d6d9',
                                                     usernameVariable : 'DH_USER',
                                                     passwordVariable : 'DH_PASSWORD')]) {
                       sh "echo \$DH_PASSWORD | docker login -u \$DH_USER --password-stdin"
