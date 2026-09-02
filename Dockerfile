@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 FROM alpine:3.21
 
 # Install bash and gawk for stable decimal calculations
